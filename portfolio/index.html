@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="home" class="section home-section">
+            <div class="home-content">
+                <div class="image-container">
+                    <img src="./1000_F_589232168_qNBfxUughDMA6LzlXiIg2e0B3ntCmZbH.jpg" alt="Your Image Description">
+                </div>
+                <div class="text-container">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Hi, I'm Pavithran C, a student specializing in Full Stack development. I create beautiful and functional websites using the latest technologies.</p>
+                    <a href="#contact" class="btn-primary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="section about-section">
+            <div class="about-content">
+                <div class="about-text-container">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm Pavithran C, a student with a passion for crafting engaging and interactive user experiences. With a strong foundation in HTML, CSS, and JavaScript, I build responsive and visually appealing websites. My journey in web development has been fueled by continuous learning and adapting to the latest technologies and design trends. I'm dedicated to turning ideas into reality and delivering high-quality work.
+                    </p>
+                    <a href="./white  Simple Resume .pdf" download class="btn-primary">Download My Resume</a>
+                </div>
+                <div class="about-image-container">
+                    <img src="./1000_F_589232168_qNBfxUughDMA6LzlXiIg2e0B3ntCmZbH.jpg" alt="About Image">
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="section skills-section">
+            <div class="skills-content">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="./html.png" alt="HTML Icon">
+                        <h3>HTML</h3>
+                        <p class="skill-percentage">90%</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./css.png" alt="CSS Icon">
+                        <h3>CSS</h3>
+                        <p class="skill-percentage">85%</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./js.png" alt="JavaScript Icon">
+                        <h3>JavaScript</h3>
+                        <p class="skill-percentage">80%</p>
+                    </div>
+                    <div class="skill-item">
+                        <img src="./react.png" alt="React Icon">
+                        <h3>ReactJS</h3>
+                        <p class="skill-percentage">55%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="section contact-section">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <p>You can reach me via the following methods:</p>
+                <div class="contact-icons">
+                    <a href="mailto:pavithran71271@gmail.com" class="contact-icon">
+                        <img src="./gmail.png" alt="Email Icon">
+                    </a>
+                    <a href="tel:+919626265557" class="contact-icon">
+                        <img src="./phone.png" alt="Phone Icon">
+                    </a>
+                    <a href="https://linkedin.com/in/pavithran-c-4a564a256" target="_blank" class="contact-icon">
+                        <img src="./linkedin.png" alt="LinkedIn Icon">
+                    </a>
+                    <a href="https://github.com/pavithran-c" target="_blank" class="contact-icon">
+                        <img src="./github.png" alt="GitHub Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Pavithran C. All rights reserved.</p>
+        </footer> 
+    </div>
+       
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const navBar = document.querySelector('.nav-bar');
+    let navBarTimeout;
+
+    function showNavBar() {
+        clearTimeout(navBarTimeout);
+        navBar.style.top = '0';
+    }
+
+    function hideNavBar() {
+        navBarTimeout = setTimeout(() => {
+            navBar.style.top = '-60px';
+        }, 3000);
+    }
+
+    navBar.addEventListener('mouseover', showNavBar);
+    document.addEventListener('mousemove', showNavBar);
+
+    navBar.addEventListener('mouseleave', hideNavBar);
+
+    document.addEventListener('mouseleave', () => {
+        navBarTimeout = setTimeout(() => {
+            navBar.style.top = '-60px';
+        }, 3000);
+    });
+});
+    </script>
+</body>
+</html>
